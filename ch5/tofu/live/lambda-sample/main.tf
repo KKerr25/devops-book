@@ -4,7 +4,7 @@ provider "aws" {
 
 module "function" {
   source  = "github.com/KKerr25/devops-book"
-  version = "1.0.0"
+  
 
   name = var.name
 
