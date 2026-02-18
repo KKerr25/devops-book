@@ -24,3 +24,5 @@ run "validate" {
     error_message = "Unexpected body: ${data.http.test_endpoint.response_body}"
   }
 }
+
+#changes
