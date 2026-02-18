@@ -5,30 +5,42 @@ variable "name" {
 }
 
 variable "src_dir" {
-  type = string
+  description = "The directory where your Lambda source code lives. This will be zipped up into a deployment package."
+  type        = string
 }
 
 variable "runtime" {
-  type = string
+  description = "The Lambda runtime to use. See https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtimes-supported for supported runtimes."
+  type        = string
 }
 
 variable "handler" {
-  type = string
+  description = "The handler (entrypoint) for your Lambda function."
+  type        = string
 }
 
 variable "memory_size" {
-  type = number
+  description = "The amount of memory, in MB, to give the Lambda function. See https://docs.aws.amazon.com/lambda/latest/operatorguide/computing-power.html for supported configurations."
+  type        = number
 }
 
 variable "timeout" {
-  type = number
+  description = "The timeout, in seconds, for the Lambda function. Max is 15 minutes (900 seconds)."
+  type        = number
+}
+
+# ---------------------------------------------------------------------------------------------------------------------
+# OPTIONAL PARAMETERS
+# ---------------------------------------------------------------------------------------------------------------------
+
+variable "create_url" {
+  description = "If set to true, expose this function via a Lambda function URL."
+  type        = bool
+  default     = false
 }
 
 variable "environment_variables" {
-  type = map(string)
-}
-
-variable "create_url" {
-  type    = bool
-  default = false
+  description = "The environment variables to set for the Lambda function."
+  type        = map(string)
+  default     = {}
 }
