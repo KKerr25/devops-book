@@ -26,5 +26,5 @@ module "iam_roles" {
 
   # TODO: fill in your own bucket and table name here!
   tofu_state_bucket         = "kkerr25-tofu-bucket" 
-  tofu_state_dynamodb_table = "fundamentals-of-devops-tofu-state" 
+  tofu_state_dynamodb_table = "kkerr25-tofu-bucket" 
 }
