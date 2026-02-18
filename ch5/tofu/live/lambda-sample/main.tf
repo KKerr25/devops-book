@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "function" {
-  source  = "Kkerr25/devops-book"
+  source  = "KKerr25/devops-book"
   version = "1.0.0"
 
   name = var.name
