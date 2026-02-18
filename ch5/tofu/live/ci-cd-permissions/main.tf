@@ -4,6 +4,7 @@ provider "aws" {
 
 module "oidc_provider" {
   source = "../../modules/github-aws-oidc"
+  version = "1.0.0"
 
   provider_url = "https://token.actions.githubusercontent.com" 
 
