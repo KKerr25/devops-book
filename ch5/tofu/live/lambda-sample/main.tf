@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "function" {
-  source  = "brikis98/devops/book//modules/lambda"
+  source  = ""github.com/KKerr25/devops-book//ch5/live/tofu/lambda-sample""
   version = "1.0.0"
 
   name = var.name
