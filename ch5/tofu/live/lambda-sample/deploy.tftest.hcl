@@ -12,6 +12,12 @@ run "validate" {
 
   variables {
     endpoint = run.deploy.function_url
+    name        = "lambda-sample"
+    src_dir     = "../src"
+    runtime     = "python3.12"
+    handler     = "app.lambda_handler"
+    memory_size = 128
+    timeout     = 10
   }
 
   assert {
